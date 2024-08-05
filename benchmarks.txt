@@ -1,0 +1,44 @@
+go mod download
+gofmt -w .
+PASS
+ok  	github.com/goplugin/plugin-automaton/cmd/simulator	0.475s
+goos: darwin
+goarch: amd64
+pkg: github.com/goplugin/plugin-automaton/internal/keepers
+cpu: VirtualApple @ 2.50GHz
+BenchmarkCacheParallelism-10                	 3714394	       312.9 ns/op	      55 B/op	       1 allocs/op
+BenchmarkDecode-10                          	  325212	      3503 ns/op	    1160 B/op	      10 allocs/op
+BenchmarkQuery-10                           	1000000000	         0.3742 ns/op	       0 B/op	       0 allocs/op
+BenchmarkObservation-10                     	   58878	     19081 ns/op	    6960 B/op	      72 allocs/op
+BenchmarkReport/4_Nodes-10                  	  126600	      9409 ns/op	    5073 B/op	      89 allocs/op
+BenchmarkReport/8_Nodes-10                  	   74012	     16156 ns/op	    9971 B/op	     173 allocs/op
+BenchmarkReport/12_Nodes-10                 	   51870	     23007 ns/op	   14870 B/op	     257 allocs/op
+BenchmarkReport/16_Nodes-10                 	   40190	     30006 ns/op	   19768 B/op	     341 allocs/op
+BenchmarkShouldAcceptFinalizedReport-10     	177727618	         6.766 ns/op	       0 B/op	       0 allocs/op
+BenchmarkShouldTransmitAcceptedReport-10    	122961585	         9.800 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSortedDedupedKeyListFunc/4_Nodes-10         	  128494	      9244 ns/op	    4922 B/op	      87 allocs/op
+BenchmarkSortedDedupedKeyListFunc/8_Nodes-10         	   73999	     16240 ns/op	    9820 B/op	     171 allocs/op
+BenchmarkSortedDedupedKeyListFunc/12_Nodes-10        	   53307	     22640 ns/op	   14718 B/op	     255 allocs/op
+BenchmarkSortedDedupedKeyListFunc/16_Nodes-10        	   40854	     29332 ns/op	   19616 B/op	     339 allocs/op
+BenchmarkWorkerGroup/MaxProcs-10                     	     147	       130.0 complete	     359 B/op	       4 allocs/op
+BenchmarkWorkerGroup/2x_MaxProcs-10                  	     295	       280.0 complete	     383 B/op	       4 allocs/op
+BenchmarkWorkerGroup/10x_MaxProcs-10                 	   10000	       900.0 complete	     128 B/op	       2 allocs/op
+PASS
+ok  	github.com/goplugin/plugin-automaton/internal/keepers	72.649s
+?   	github.com/goplugin/plugin-automaton/internal/mocks	[no test files]
+PASS
+ok  	github.com/goplugin/plugin-automaton/pkg	0.560s
+goos: darwin
+goarch: amd64
+pkg: github.com/goplugin/plugin-automaton/pkg/chain
+cpu: VirtualApple @ 2.50GHz
+BenchmarkEncodeReport/No_Perform_Data-10         	  165970	      6783 ns/op	    3096 B/op	      71 allocs/op
+BenchmarkEncodeReport/Small_Perform_Data-10      	  170286	      7121 ns/op	    3608 B/op	      75 allocs/op
+BenchmarkEncodeReport/Large_Perform_Data-10      	  164830	      7304 ns/op	    4152 B/op	      74 allocs/op
+BenchmarkEncodeReport/Multiple_Performs-10       	   89985	     13546 ns/op	    9944 B/op	     169 allocs/op
+PASS
+ok  	github.com/goplugin/plugin-automaton/pkg/chain	33.573s
+?   	github.com/goplugin/plugin-automaton/pkg/chain/gethwrappers	[no test files]
+?   	github.com/goplugin/plugin-automaton/pkg/chain/gethwrappers/keeper_registry_logic2_0	[no test files]
+?   	github.com/goplugin/plugin-automaton/pkg/chain/gethwrappers/keeper_registry_wrapper2_0	[no test files]
+?   	github.com/goplugin/plugin-automaton/pkg/types	[no test files]
