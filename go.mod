@@ -4,7 +4,7 @@ go 1.22.4
 
 require (
 	github.com/Maldris/mathparse v0.0.0-20170508133428-f0d009a7a773
-	github.com/ethereum/go-ethereum v1.14.7
+	github.com/ethereum/go-ethereum v1.13.8
 	github.com/go-echarts/go-echarts/v2 v2.4.1
 	github.com/goccy/go-json v0.10.3
 	github.com/google/uuid v1.6.0
